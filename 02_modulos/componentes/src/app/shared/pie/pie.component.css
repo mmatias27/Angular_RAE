@@ -1,0 +1,8 @@
+footer {
+    position: fixed;
+}
+p {
+    text-align: center;
+    color: rgb(85, 58, 15);
+    border-top: tomato;
+}

@@ -1,0 +1,12 @@
+<div class="container">
+  <h2>Bingding</h2>
+  <p>
+    <label for="nombre">Dime tu nombre</label>
+    <input type="test" id="nombre" [(ngModel)]="sNombre">
+  </p>
+  <p>
+    <button (click)="btnBorrar($event)">Borrar</button>
+  </p>
+  <p>Hola {{sNombre.toLocaleUpperCase()}}</p>
+  <p>Tienes menos de {{nEdad + 2}} años</p>
+</div>
