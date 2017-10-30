@@ -1,0 +1,15 @@
+<div class="container">
+  <h2>Ideas</h2>
+  <p>
+    <input type="text" placeholder="Escribe una idea" [(ngModel)]="sIdea">
+  </p>
+  <p>
+    <button (click)="btnAdd()">Añadir</button>
+  </p>
+  <div *ngIf="aIdeas.length > 0">
+    <h3>Lista de ideas</h3>
+    <ul>
+      <li *ngFor="let idea of aIdeas; let i = index ">{{i + 1}} - {{idea}}</li>
+    </ul>
+  </div>
+</div>
