@@ -1,4 +1,4 @@
-import { BooksService } from './../../books.service';
+import { BooksService } from '../../services/books.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -21,10 +21,10 @@ export class PadreComponent implements OnInit {
 
   buscar() {
     // Sincronica
-    // this.aLibros = this.booksService.buscar(this.sClave);
+    this.aLibros = this.booksService.buscar(this.sClave);
     // ASincronica
-    this.aLibrosAsinc = this.booksService.buscarAsync(this.sClave);
-    console.log(this.aLibrosAsinc);
+    // this.aLibrosAsinc = this.booksService.buscarAsync(this.sClave);
+    // console.log(this.aLibrosAsinc);
     this.sClave = '';
   }
 }

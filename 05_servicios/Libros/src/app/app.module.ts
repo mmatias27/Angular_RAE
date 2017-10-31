@@ -1,4 +1,6 @@
-import { BooksService } from './books.service';
+import { BookshttpService } from './services/bookshttp.service';
+import { BooksService } from './services/books.service';
+import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -14,11 +16,13 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     FormsModule,
+    HttpModule,
     ComponentesModule,
     SharedModule
   ],
   providers: [
-    BooksService
+    BooksService,
+    BookshttpService
   ],
   bootstrap: [AppComponent]
 })
