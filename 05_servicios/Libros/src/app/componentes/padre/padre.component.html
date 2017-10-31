@@ -1,0 +1,15 @@
+<div class="container">
+  <h2>
+    Clave de busqueda
+  </h2>
+  <input type="text" [(ngModel)]="sClave"> 
+  <p>
+    <button (click)="buscar()">Buscar</button>
+  </p>
+  <div *ngIf = "aLibros.length">
+    <h3>Lista de libros</h3>
+    <ul>
+      <li *ngFor="let libro of aLibros">{{libro}}</li>
+    </ul>
+  </div>
+</div>

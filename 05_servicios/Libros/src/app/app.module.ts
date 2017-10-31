@@ -1,23 +1,25 @@
-import { Form2Component } from './form2/form2.component';
+import { BooksService } from './books.service';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { SharedModule } from './shared/shared.module';
+import { ComponentesModule } from './componentes/componentes.module';
 import { AppComponent } from './app.component';
-import { Form1Component } from './form1/form1.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    Form1Component,
-    Form2Component
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    ComponentesModule,
     SharedModule
   ],
-  providers: [],
+  providers: [
+    BooksService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

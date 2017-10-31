@@ -1,0 +1,14 @@
+<div class="container">
+  <h2>
+    Componente hijo
+  </h2>
+  <div *ngIf="name.length">
+    <p>Mi padre me llama {{name}}</p>
+    <p><input type="text" placeholder="Como quieres llamarte"
+      [(ngModel)] = "sNamePreferido"></p>
+    <p>
+      <button (click)="btnBorrar()">No me llamo {{name}}</button>
+    </p>  
+  </div>
+</div>
+

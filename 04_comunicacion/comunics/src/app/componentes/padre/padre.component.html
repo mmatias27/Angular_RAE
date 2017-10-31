@@ -1,0 +1,10 @@
+<div class="container">
+  <h2>
+    Componente padre
+  </h2>
+  <input type="text" placeholder="Escribe un nombre" [(ngModel)]="sNombre">
+  <app-hijo [name]="sNombre" (evtBorrar)="responderEvt($event)"></app-hijo>
+  <p *ngIf="sNombre.length">
+    El hijo se llamará {{sNombre}}
+  </p>  
+</div>
